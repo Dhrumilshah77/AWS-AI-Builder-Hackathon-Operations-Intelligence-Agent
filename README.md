@@ -5,6 +5,16 @@
 
 ---
 
+## Live Demo
+
+**Website:** [https://dxoecztual878.cloudfront.net/operations-intelligence.html](https://dxoecztual878.cloudfront.net/operations-intelligence.html)
+
+### Dashboard Screenshot
+
+![Operations Intelligence Dashboard](screenshots/dashboard-main.gif)
+
+---
+
 ## Project Overview
 
 This project implements an **Operations Intelligence Agent** that extracts, processes, and queries structured data from business documents (Orders, Invoices, Catalogs) using AI-powered document extraction and multi-agent orchestration.
@@ -135,6 +145,31 @@ Output: Structured JSON with Pydantic schema validation
 
 ---
 
+## Project Structure
+
+```
+├── README.md
+├── architecture/
+│   └── ARCHITECTURE.md
+├── screenshots/
+│   └── dashboard-main.gif
+└── src/
+    ├── document-extraction/
+    │   └── process_documents.py      # LlamaCloud extraction script
+    ├── web-interface/
+    │   └── index.html                # Interactive dashboard
+    ├── coder-templates/
+    │   ├── docintel-workflow-pulumi-ld/
+    │   │   └── main.tf               # Pulumi + LaunchDarkly template
+    │   └── docintel-workflow-arize-llama/
+    │       └── main.tf               # Arize + LlamaIndex template
+    └── langgraph-agent/
+        ├── main.py                   # LangGraph agent code
+        └── pyproject.toml            # Dependencies
+```
+
+---
+
 ## Coder Templates Created
 
 | Template Name | MCP Servers | Purpose |
@@ -156,16 +191,6 @@ Output: Structured JSON with Pydantic schema validation
 
 ---
 
-## Screenshots
-
-See the `/screenshots` folder for:
-- Web interface dashboard
-- Query results in tabular format
-- Agent badge interactions
-- Knowledge Base data views
-
----
-
 ## Technologies Stack
 
 - **Document Processing:** LlamaCloud, LlamaIndex
@@ -178,34 +203,9 @@ See the `/screenshots` folder for:
 
 ---
 
-## Project Structure
-
-```
-operations-intelligence-agent/
-├── process_documents.py      # LlamaCloud extraction script
-├── web/
-│   └── index.html           # Interactive dashboard
-├── extracted/               # Processed JSON documents
-└── documents/               # Source PDF files
-
-coder-templates/
-├── docintel-workflow-pulumi-ld/
-│   └── main.tf              # Pulumi + LaunchDarkly template
-└── docintel-workflow-arize-llama/
-    └── main.tf              # Arize + LlamaIndex template
-```
-
----
-
 ## Built For
 
 **AWS Clash of Agents Challenge** - LlamaIndex Document Extraction Track
-
----
-
-## License
-
-This project was created as part of the AWS AI Builder Hackathon.
 
 ---
 
